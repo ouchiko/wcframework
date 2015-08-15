@@ -13,7 +13,7 @@
  * This is called from the base routing file when a file is not present.
  */
 
-use Appspace\Controllers\Controller;
+use AppSpace\Controllers\Controller;
 
 class MyErrorController extends Controller {
     public function init() {
