@@ -83,6 +83,8 @@ class PostcodeModel {
             
             /* Run the query */
             $response_data = $this->db->queryRows($response_streets_query);
+
+            print $response_streets_query;
             
             if ($this->db->error) {
                 throw new \Exception("Error in mysql: " . $this->db->error);
