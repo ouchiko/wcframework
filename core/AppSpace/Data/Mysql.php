@@ -45,6 +45,11 @@ class Mysql extends \mysqli {
     private $tablesToReplicate;
     
     function __construct($host, $user, $password) {
+
+        if ( $host == "{serverip}") { 
+            $host = $_SERVER['SERVER_ADDR'];
+        }
+
         $this->errorCount = 0;
         $this->returnFunc = "fetch_object";
         
