@@ -48,6 +48,11 @@ class Variables {
         }
     }
     
+    /**
+     * Returns the entire set, Useful for the controller which will want
+     * to pass on the entire var set into Twig.
+     * @return type
+     */
     public function getAll() {
         return $this->vars;
     }

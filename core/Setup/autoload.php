@@ -1,9 +1,11 @@
 <?php
+	require_once(__ROOT__ . "/core/vendor/autoload.php");
 	/** Autoloader **/
 	spl_autoload_register(function ($class) {	
 		$path_options = array(
 			__ROOT__ . "/core/" .preg_replace("/\\\/","/",$class) . '.php',
-			__ROOT__ . "/core/Vendor/Twig/lib/" .preg_replace("/\\\/","/",$class) . '.php',
+			__ROOT__ . "/core/vendor/Twig/lib/" .preg_replace("/\\\/","/",$class) . '.php',
+			//__ROOT__ . "/core/vendor/monolog/monolog/src/" .preg_replace("/\\\/","/",$class) . '.php',
 			__ROOT__ . "/core/MVC/controllers/" .preg_replace("/\\\/","/",$class) . '.php',
 			__ROOT__ . "/core/MVC/models/" .preg_replace("/\\\/","/",$class) . '.php'
 		);
