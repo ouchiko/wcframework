@@ -84,8 +84,7 @@ class PostcodeModel {
             /* Run the query */
             $response_data = $this->db->queryRows($response_streets_query);
 
-            print $response_streets_query;
-            
+
             if ($this->db->error) {
                 throw new \Exception("Error in mysql: " . $this->db->error);
             }
@@ -148,6 +147,9 @@ class PostcodeModel {
                         CodePoint.Postcodes 
                     WHERE
                         postcode LIKE '%s%%' LIMIT 0,20", $this->postcode));
+
+            print "set: " . isset($dbresponse_postcoderows) . "<BR>";
+            print "cnt: " . count($dbresponse_postcoderows) . "<BR>";
             
             /* Take the first record so we can get the min/max */
             if (isset($dbresponse_postcoderows) && count($dbresponse_postcoderows) > 0) {
