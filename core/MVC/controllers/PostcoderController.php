@@ -10,7 +10,7 @@
 
 use AppSpace\Controllers\Controller;
 use AppSpace\Data\Mysql;
-use MVC\Models\PostcodeModel;
+use MVC\models\PostcodeModel;
 
 class PostcoderController extends Controller {
     
