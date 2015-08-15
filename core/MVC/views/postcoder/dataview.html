@@ -1,0 +1,83 @@
+<!-- Exception Handler -->
+{% if pagedata.errors.exception %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exception in Postcoder</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" type="text/css" href="/css/postcoder/dataview.css">
+        </head>
+        <body>
+            <div class="exception">
+                <div class="title">Exception in Postcoder</div>
+                <div class="content">{{ pagedata.errors.exception }}</div>
+                <div class="content">Visit the <a href="/postcoder">documentation</a> page for more details</div>
+            </div>
+        </body>
+    </html>
+{% endif %}
+
+<!-- JSON Outs -->
+{% if pagedata.sets and pagedata.extension == 'json' %}
+	{{ pagedata.sets }}
+<!-- Serialized -->
+{% elseif pagedata.sets and pagedata.extension == 'ser' %}
+	{{ pagedata.sets }}
+<!-- Print_R -->
+{% elseif pagedata.sets and pagedata.extension == 'printr' %}
+<xmp>
+	{{ pagedata.sets }}
+</xmp>
+<!-- HTML Standard View Out -->
+{% elseif pagedata.sets and pagedata.extension == 'html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visual Result Set</title>
+	<link rel="stylesheet" type="text/css" href="/css/postcoder/dataview.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="bh"></div>
+	<h1>Showing results for '{{ vars.uri.postcode }}'</h1>
+	<div class="container">
+		<div class="title">Postcode results</div>
+		<table border="1" cellpadding="6">
+	        {% for postcode in pagedata.sets.postcodes %}
+	        <tr>
+	            <td>{{ postcode.postcode }}</td>
+	            <td>{{ postcode.formatted }}</td>
+	            <td>{{ postcode.easting }}</td>
+	            <td>{{ postcode.northing }}</td>
+	            <td>{{ postcode.latitude }}</td>
+	            <td>{{ postcode.longitude }}</td>
+	            <td>{{ postcode.admin_ward }}</td>
+	            <td>{{ postcode.admin_district }}</td>
+	        </tr>
+	        {% endfor %}
+	    </table>
+    </div>
+    <div class="container">
+    	<div class="title">Street Results</div>
+	    <table border="1" cellpadding="6">
+	        {% for street in pagedata.sets.streets %}
+	        <tr>
+	            <td>{{ street.name }}</td>
+	            <td>{{ street.classification }}</td>
+	            <td>{{ street.centx }}</td>
+	            <td>{{ street.centy }}</td>
+	            <td>{{ street.settlement }}</td>
+	            <td>{{ street.locality }}</td>
+	            <td>{{ street.cou_unit }}</td>
+	            <td>{{ street.local_auth }}</td>
+	            <td>{{ street.cent_lat }}</td>
+	            <td>{{ street.cent_lon }}</td>
+	            <td>{{ street.distance }}</td>
+	        </tr>
+	        {% endfor %}
+	    </table>
+   </div>
+   Copyright (C) 2015 - @ouchy
+</body>
+</html>
+{% endif %}

@@ -1,0 +1,61 @@
+
+<div class="section">
+	<div class="sectiontitle">PHPFrame</div>
+	<div class="subtitle">
+		Controllers
+	</div>
+	<div class="sectioncontent">
+		THE MVC framework should actually be named C[MV] (Controller, Model, View) as this is the actual process!  The controller sits as the primary junction between
+		a URL being called and the action which will take place.  In essense if you create a new url scheme in the routing file <span class="code">(./configuration/routing.json)</span>
+		you can establish a new with a controlling object <strong>(The Controller)</strong>.
+	</div>
+
+	<div class="subtitle">
+		The basics of the Controller
+	</div>
+	<div class="sectioncontent">
+		Unless you create a more complex routing configuration the basic execution of the controller is done in the <span class="code">init()</span> method.  This is a requirement of the
+		controller object and it will be run by default for a URL.  Within this you handle the preparation of the page you want to display.  If you had simply wanted to display a static 
+		html file then you could simply load a <span class="code">view</span> or you begin to add more complicated elements. What follows is the simplist answer to a controller.  The user
+		has requested a url and the init method has been called by default.  The controller has responded by rendering out a view.
+
+		<div class="codeblock">
+		<xmp>
+public function init()
+{
+    $this -> view("documentation/index.html", array());
+}
+		   </xmp>
+		</div>
+
+		Now, the controller also acts as the middle man between the view (what the user sees) and the data (what we show the user).  The controller should therefore not handle actual data
+		(e.g. doing some SQL query) but instead offload those tasks to other libraries, in this case, models.  First, here's another basic controller which builds a simple form of data to
+		submit to the view.
+<div class="codeblock">
+		<xmp>
+public function init()
+{
+	$data = array("title" => "My Webpage Title");
+
+    $this -> view("documentation/index.html", $data);
+}
+		   </xmp>
+		</div>
+
+		If we want a more complicated bit of data to pass to the view then we could do the following:
+
+<div class="codeblock">
+		<xmp>
+public function init()
+{
+$thisModel
+
+	$data = array("title" => "My Webpage Title");
+
+    $this -> view("documentation/index.html", $data);
+}
+		   </xmp>
+		</div>	
+
+	</div>
+</div>

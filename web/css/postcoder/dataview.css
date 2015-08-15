@@ -1,0 +1,46 @@
+body {
+    font-family: "Open Sans";
+    padding: 30px;
+}
+.exception {
+    font-size: 25px;
+    font-weight: 300;
+    color: #444;
+}
+.title {
+    font-size: 30px;
+    font-weight: 400;
+}
+.content {
+    margin-top: 20px;
+}
+.content a {
+    color: #E75422;
+    font-weight: 600;
+}
+.container {
+    margin-top: 20px;
+}
+.container .title {
+    border-bottom: 2px solid #E75422;
+    margin-bottom: 15px;
+}
+table {
+    border-collapse: collapse;
+    width:100%;
+}
+td {
+    padding: 9px;
+}
+
+tr:nth-child(odd) {
+    background-color: #E9E9E9;
+}
+
+.bh {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    border-top:12px solid #000;
+}

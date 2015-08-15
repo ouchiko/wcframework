@@ -1,0 +1,15 @@
+body {
+    font-family: "Open Sans";
+    margin: 0px;
+    padding: 40px;
+    font-weight: 300;
+}
+h1 {
+    font-size: 25px;
+    color: #B2B2B2;
+    font-weight: 400;
+}
+.description {
+    font-size: 16px;
+    color: #7F7F7F;
+}

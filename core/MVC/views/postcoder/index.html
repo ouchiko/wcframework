@@ -1,0 +1,138 @@
+{% include 'postcoder/templates/head.html' %}
+
+	<div class="content">
+		<div class="strut">
+			<div class="base">Postcoder</div>
+			<div class="subtitle">Introduction</div>
+			<div class="body">
+				Welcome to the postcoder api.  The purpose is to provide you with an easy to use, free and open source
+				method to lookup postcodes in the UK and return information. The api provides locality information, local streets,
+				local transport and much more.  You can chose how little or how much information to get back.
+			</div>
+
+			<div class="subtitle">The data and project</div>
+			<div class="body">
+				The data sets used in this project are hosted on <li class="fa fa-github"></li> github <a href="https://github.com/ouchiko/ukord-postcodes">https://github.com/ouchiko/ukord-postcodes</a>.  These are the raw mysql inserts for creating a complete
+				database replica of the data presented here.  The interface, my php framework and logic for the API are also available
+				 at <li class="fa fa-github"></li> github <a href="https://github.com/ouchiko/phpframe">https://github.com/ouchiko/phpframe</a>. If you're interested in the API element then the <strong>MVC/models/PostCodeModel.php</strong> and <strong>MVC/controllers/PostcoderController.php</strong> are the two elements to look at.
+			</div>
+
+			<div class="subtitle">Using the API</div>
+
+			<div class="body">
+				The following is an example of a basic call to the API.  You should note that the postcode can be partial or full
+				and the system will return all the information for that range of postcodes.  Note that the service is limited to
+				returning data with a minimum of three charatcers.
+			</div>
+
+			<div class="codesection">
+				<div class="codeheading"><li class="fa fa-code"></li> Requested a basic postcode</div>
+ 				<pre class="language-markup"><code class="language-markup">http://{{ vars.server.server_name }}/postcoder/api/[postcode]/index.html</code></pre>
+ 			</div>
+
+			<div class="body">
+				Now, it's 99% likely you want that data returned in a more computer friendly way.  Just switch the <strong>.html</strong> to either <strong>.printr</strong>, <strong>.json</strong> or <strong>.ser</strong>. Each of these will allow you to easily read in the data into your application. The <strong>.html</strong> extension is purely for a human readable form of the data.
+			</div>
+
+			<div class="body">
+				When making a request you can define the level of information you want.  The variable <strong>choice</strong> can be added with any combination of the following options:
+
+			</div>
+			<div class="codesection">
+				<div class="codeheading"><li class="fa fa-code"></li> Types of data request</div>
+				<pre class="language-markup"><code class="language-markup">?choice=streets,postcodes,travel</code></pre>
+			</div>
+
+			<div class="body">
+				When we put all that together we can format a request for the data in <strong>.json</strong> format and include all the information we have on streets, postcodes and any local travel information
+			</div>
+
+			<div class="codesection">
+				<div class="codeheading"><li class="fa fa-code"></li> Defining the information you want</div>
+				<pre class="language-markup"><code class="language-markup">http://{{ vars.server.server_name }}/postcoder/api/[postcode]/index.json?choice=streets,travel,postcodes</code></pre>
+			</div>
+
+			<div class="subtitle">Data responses</div>
+
+			<div class="body">
+				The <strong>.html</strong> request will bring back a good visual view for you to look through.  The <strong>.json</strong> and <strong>.ser</strong> all bring back usable data formats.  For a good example of the actual data sets use <strong>.printr</strong>
+			</div>
+
+			<div class="codesection">
+				<div class="codeheading"><li class="fa fa-code"></li> Format of the returned data. 1..N postcode matches for keyword</div>
+				<pre class="language-markup"><code class="language-markup">Array
+(
+    [postcodes] =&gt; Array
+        (
+            [0] =&gt; stdClass Object
+                (
+                    [postcode] =&gt; AL53HA
+                    [easting] =&gt; 511712
+                    [northing] =&gt; 215668
+                    [latitude] =&gt; 51.828
+                    [longitude] =&gt; -0.37874
+                    [formatted] =&gt; AL5 3HA
+                    [admin_ward] =&gt; Harpenden North Ward, District Ward
+                    [admin_district] =&gt; St. Albans District (B), District
+                )
+
+            [1] =&gt; stdClass Object
+                (
+                    [postcode] =&gt; AL53HB
+                    [easting] =&gt; 511480
+                    [northing] =&gt; 215646
+                    [latitude] =&gt; 51.82785
+                    [longitude] =&gt; -0.38212
+                    [formatted] =&gt; AL5 3HB
+                    [admin_ward] =&gt; Harpenden North Ward, District Ward
+                    [admin_district] =&gt; St. Albans District (B), District
+                )
+
+            ...N
+        )
+)
+
+Array
+(
+    [postcodes] =&gt; Array
+        (
+            [0] =&gt; stdClass Object
+                (
+                    [postcode] =&gt; AL53HA
+                    [easting] =&gt; 511712
+                    [northing] =&gt; 215668
+                    [latitude] =&gt; 51.828
+                    [longitude] =&gt; -0.37874
+                    [formatted] =&gt; AL5 3HA
+                    [admin_ward] =&gt; Harpenden North Ward, District Ward
+                    [admin_district] =&gt; St. Albans District (B), District
+                )
+
+            [1] =&gt; stdClass Object
+                (
+                    [postcode] =&gt; AL53HB
+                    [easting] =&gt; 511480
+                    [northing] =&gt; 215646
+                    [latitude] =&gt; 51.82785
+                    [longitude] =&gt; -0.38212
+                    [formatted] =&gt; AL5 3HB
+                    [admin_ward] =&gt; Harpenden North Ward, District Ward
+                    [admin_district] =&gt; St. Albans District (B), District
+                )
+
+            1..N
+        )
+)</code></pre>
+			</div>
+
+			
+			<div class="subtitle">Acknowledgments</div>
+			<div class="body">
+				This service owes thanks to Ordnance Survey for thier wonderful OpenData project, PHPCoord from John Stott and more recently dvdoug over at github who ported it. Whilst I built the framework for this site it uses the excellent Twig for templating and the equally awesome "font awesome" for iconography.
+			</div>
+
+			
+		</div>
+	</div>
+
+{% include 'postcoder/templates/tail.html' %}

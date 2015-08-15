@@ -1,0 +1,17 @@
+{
+    "phpframe": "1.0",
+    "settings": {
+        "check_back_version": "http://phpframe.com/version",
+        "role": "development" 
+    },
+    "data": {
+        "mysql": {
+            "live": {
+                "host": "127.0.0.1",
+                "user": "vagrant",
+                "pass": "vagrant",
+                "port": "3304"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "phpframe": "1.00",
+    "routing": [{
+        "uri": "/testthis(.*)",
+        "controller": "MyAppController",
+        "tasks": {
+            "create": "create",
+            "wanker": "doWankSystem"
+        }
+    }, {
+        "uri": "/postcoder/api/(.*)/index(.*)",
+        "controller": "PostcoderController::find",
+        "variables" : true,
+        "seperator" : "/",
+        "naming" : "root,api,postcode,extension"   
+    }, {
+        "uri": "/postcoder(.*)",
+        "controller": "PostcoderController",
+        "tasks": {
+            "api": "find"
+        }
+    }, {
+        "uri": "/documentation(.*)",
+        "variables": true,
+        "seperator": "/",
+        "naming": "root,page",
+        "controller": "PHPFrameDocumentationController"
+    }],
+    "errors": {
+        "base_error": {
+            "controller": "MyErrorController"
+        }
+    }
+}

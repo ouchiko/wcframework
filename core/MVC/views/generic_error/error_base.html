@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ pagedata.title }}</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/fontawesome/css/font-awesome.min.css">
+	{% for stylesheet in pagedata.stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
+    {% endfor %}
+</head>
+<body>
+	<div class="container">
+		<h1>Error 404</h1>
+		<div class="description">
+			There was a problem loading this page.  We couldn't find the requested URL, this could be our fault
+			or you may have entered the URL incorrectly. 
+		</div>
+	</div>
+</body>
+</html>

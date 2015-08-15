@@ -1,0 +1,26 @@
+<!-- twig: site_heading.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ pagedata.title }}}</title>
+    <meta name="keyword" value="{{ pagedata.keywords }}"/>
+    <meta name="description" value="{{ pagedata.description }}"/>
+    {% for stylesheet in pagedata.stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
+    {% endfor %}
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="heading">
+		<div class="left"><h1>PHPFrame</h1></div>
+		<div class="right">
+			<div class="menu option">Home</div>
+			<div class="menu option">Documentation</div>
+			<div class="menu option">Download</div>
+		</div>
+		<div class="clearing"></div>
+	</div>
+	<div class="content">	
+
