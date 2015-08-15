@@ -7,7 +7,7 @@
     "data": {
         "mysql": {
             "live": {
-                "host": "{severip}",
+                "host": "{serverip}",
                 "user": "vagrant",
                 "pass": "vagrant",
                 "port": "3304"
