@@ -7,7 +7,7 @@
 	define("__VENDOR__","../Vendor");
 	define("__ERROR_VISUAL__", true);
 	define("__ROOT__" , $_SERVER['DOCUMENT_ROOT']);
-	define("__LOGS__", "/var/log");
+	define("__LOGS__", "/tmp");
 
 	if ( __ERROR_VISUAL__ ) 
 	{
