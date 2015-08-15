@@ -24,10 +24,10 @@ class PostcodeModel {
     
     /**
      * Create the default Model
-     * @param type $db 
-     * @param type $postcode 
-     * @param type $extension 
-     * @param type $choices 
+     * @param type $db
+     * @param type $postcode
+     * @param type $extension
+     * @param type $choices
      * @return type
      */
     public function __construct($db, $postcode, $extension, $choices) {
@@ -39,10 +39,10 @@ class PostcodeModel {
     
     /**
      * Obtains the local street information from the presented postcode data
-     * @param type $mineasting 
-     * @param type $minnorthing 
-     * @param type $maxeasting 
-     * @param type $maxnorthing 
+     * @param type $mineasting
+     * @param type $minnorthing
+     * @param type $maxeasting
+     * @param type $maxnorthing
      * @return type
      */
     public function getLocalStreetInformation($mineasting, $minnorthing, $maxeasting, $maxnorthing) {
@@ -65,7 +65,8 @@ class PostcodeModel {
             }
             
             /* Run the quuery against the database for more information */
-           // print $centralx . " - " . $centraly . "<BR>";   
+            
+            // print $centralx . " - " . $centraly . "<BR>";
             
             $response_streets_query = sprintf("
             SELECT 
@@ -83,6 +84,10 @@ class PostcodeModel {
             /* Run the query */
             $response_data = $this->db->queryRows($response_streets_query);
             
+            if ($this->db->error) {
+                throw new \Exception("Error in mysql: " . $this->db->error);
+            }
+            
             return isset($response_data) ? $response_data : array();
         }
     }
@@ -91,7 +96,7 @@ class PostcodeModel {
      * Receives the origin data array and formats into the correct
      * response type, being JSON, SERIALIZED, XML (Not supported),
      * PRINTR (raw) or just the data lump.
-     * @param type $data 
+     * @param type $data
      * @return type
      */
     private function formatDataType($data) {
@@ -154,7 +159,7 @@ class PostcodeModel {
                     if ($minnorthing > $tmp->northing) $minnorthing = $tmp->northing;
                     if ($maxnorthing < $tmp->northing) $maxnorthing = $tmp->northing;
                 }
-
+                
                 //print "mm: " . $mineasting . ", " . $minnorthing . " - " . $maxeasting . ", " . $maxnorthing . "<BR>";
                 
                 $dbresponse_streetrows = $this->getLocalStreetInformation($mineasting, $minnorthing, $maxeasting, $maxnorthing);
