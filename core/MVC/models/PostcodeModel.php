@@ -47,8 +47,14 @@ class PostcodeModel {
      */
     public function getLocalStreetInformation($mineasting, $minnorthing, $maxeasting, $maxnorthing) {
         
+        global $logger;
+        
+        $logger->addInfo("Entering street resolution");
+        
         /* Make sure we have the right details to do this */
         if (isset($this->choices) && in_array("streets", $this->choices)) {
+            
+            $logger->addInfo("Street choices selected");
             
             /* Process the middle point of the road selection */
             $centralx = $maxeasting - (($maxeasting - $mineasting) / 2);
@@ -68,6 +74,8 @@ class PostcodeModel {
             
             // print $centralx . " - " . $centraly . "<BR>";
             
+            $logger->addInfo("Preparing query for streets");
+            
             $response_streets_query = sprintf("
             SELECT 
                 LOWER(name) as name, classification, centx, centy, settlement, locality, cou_unit, localauth, cent_lat, cent_lon,
@@ -83,8 +91,9 @@ class PostcodeModel {
             
             /* Run the query */
             $response_data = $this->db->queryRows($response_streets_query);
-
-
+            
+            $logger->addInfo("Streets returned " . count($response_data));
+            
             if ($this->db->error) {
                 throw new \Exception("Error in mysql: " . $this->db->error);
             }
@@ -147,9 +156,6 @@ class PostcodeModel {
                         CodePoint.Postcodes 
                     WHERE
                         postcode LIKE '%s%%' LIMIT 0,20", $this->postcode));
-
-            print "set: " . isset($dbresponse_postcoderows) . "<BR>";
-            print "cnt: " . count($dbresponse_postcoderows) . "<BR>";
             
             /* Take the first record so we can get the min/max */
             if (isset($dbresponse_postcoderows) && count($dbresponse_postcoderows) > 0) {
