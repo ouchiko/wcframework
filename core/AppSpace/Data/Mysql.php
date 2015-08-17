@@ -46,8 +46,9 @@ class Mysql extends \mysqli {
     
     function __construct($host, $user, $password) {
 
-        if ( $host == "{serverip}") { 
-            $host = $_SERVER['SERVER_ADDR'];
+        if ( preg_match("/{(.*)}/", $host, $matches)) { 
+            print_r($matches);
+            $host = $_SERVER[$matches[1]];
         }
 
         $this->errorCount = 0;
