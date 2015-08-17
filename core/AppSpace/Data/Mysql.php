@@ -38,7 +38,7 @@ class Mysql extends \mysqli {
     private $returnFunc;
     private $productName;
     private $logType;
-     // Can be no_logging, mail_logging or file_logging
+     // Can basename(path)e no_logging, mail_logging or file_logging
     private $emailContact;
     private $errorCount;
     private $replicate;
@@ -47,7 +47,6 @@ class Mysql extends \mysqli {
     function __construct($host, $user, $password) {
 
         if ( preg_match("/{(.*)}/", $host, $matches)) { 
-            print_r($matches);
             $host = $_SERVER[$matches[1]];
         }
 
