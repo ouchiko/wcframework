@@ -8,11 +8,14 @@
             "wanker": "doWankSystem"
         }
     }, {
+        "uri": "/pullrequest",
+        "controller": "PullController"
+    }, {
         "uri": "/postcoder/api/(.*)/index(.*)",
         "controller": "PostcoderController::find",
-        "variables" : true,
-        "seperator" : "/",
-        "naming" : "root,api,postcode,extension"   
+        "variables": true,
+        "seperator": "/",
+        "naming": "root,api,postcode,extension"
     }, {
         "uri": "/postcoder(.*)",
         "controller": "PostcoderController",
