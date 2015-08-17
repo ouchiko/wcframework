@@ -27,20 +27,21 @@ body {
 }
 table {
     border-collapse: collapse;
-    width:100%;
+    width: 100%;
 }
 td {
     padding: 9px;
 }
-
-tr:nth-child(odd) {
+tr: nth-child(odd) {
     background-color: #E9E9E9;
 }
-
 .bh {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    border-top:12px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 12px solid #000;
+}
+.results_description {
+    margin-top: 20px;
 }

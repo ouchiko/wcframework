@@ -19,6 +19,7 @@ class Variables {
      */
     public function __construct($urivars) {
         
+        /* Define what variables we want to allow into the stack */
         $variable_set = array(
             "get" => $_GET,
             "post" => $_POST,
@@ -27,20 +28,25 @@ class Variables {
             "env" => $_ENV
         );
         
-        $tmp = array();
+        $named_variable_array = array();
         
+        /* Loop the varables defined the variable_Set and create
+         a named array for use. */
         foreach ($variable_set as $naming => $dataset) {
             foreach ($dataset as $name => $value) {
-                $tmp[$naming][$name] = $value;
+                $named_variable_array[$naming][$name] = $value;
             }
         }
         
+        /** URL Variables coming from the request_uri */
         if (isset($urivars) && $urivars) {
-            
-            $tmp["uri"] = $urivars;
+            $named_variable_array["uri"] = $urivars;
         }
         
-        foreach ($tmp as $coreid => $vars) {
+        /** Push these vairables into the var list so they become
+         accessible by the rest of the application
+         */
+        foreach ($named_variable_array as $coreid => $vars) {
             if (isset($vars) && count($vars) > 0) {
                 foreach ($vars as $n => $v) {
                     $this->vars[$coreid][strtolower($n) ] = $v;

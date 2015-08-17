@@ -39,8 +39,23 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="bh"></div>
+	<div class="bh"></div>	
 	<h1>Showing results for '{{ vars.uri.postcode }}'</h1>
+	<div class="results_description">
+		This is the visual view of the postcode API.  It represents the data obtained via the input postcode ({{ vars.uri.postcode }}) 
+		and includes the choices you've specified.  If you haven't included any choices you can specify choices=[streets,travel].  For your
+		search we found {{ pagedata.sets.postcodes|length }} results.  
+	</div>
+	<div class="results_description">
+		{% if pagedata.sets.postcodes|length == 20 %}
+		Please note that the maximum number of postcodes returned per query is 20.  In this instance you can further refine your postcode
+		down to get a more definitive result.
+		{% endif %}
+	</div>
+	<div class="results_description">
+		Remember, changing the extension from <strong>.html</strong> to either <strong>.json</strong> or <strong>.ser</strong> will bring 
+		back the data is a more machine readable form
+	</div>
 	<div class="container">
 		<div class="title">Postcode results</div>
 		<table border="1" cellpadding="6">
