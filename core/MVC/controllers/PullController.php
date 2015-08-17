@@ -12,12 +12,20 @@ use AppSpace\Data\Mysql;
 
 class PullController extends Controller {
     
+	private function pingPullRequest(){
+		$fp = fopen("/tmp/pullrequest.txt", "w");
+		if ( $fp ) {
+			fputs($fp, "1");
+			fclose($fp);
+		}
+	}
+
     /**
      * Controller initialiser
      * @return type
      */
     public function init() {
-        passthru($_SERVER['DOCUMENT_ROOT'] . "/../git-pull");
+    	$this->pingPullRequest();
         $this->view("system/pullrequest.html", array());
     }
 }
