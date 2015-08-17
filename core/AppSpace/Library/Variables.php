@@ -23,7 +23,8 @@ class Variables {
             "get" => $_GET,
             "post" => $_POST,
             "cookie" => $_COOKIE,
-            "server" => $_SERVER
+            "server" => $_SERVER,
+            "env" => $_ENV
         );
         
         $tmp = array();
