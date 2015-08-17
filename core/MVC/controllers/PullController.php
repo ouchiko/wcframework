@@ -13,7 +13,7 @@ use AppSpace\Data\Mysql;
 class PullController extends Controller {
     
 	private function pingPullRequest(){
-		$fp = fopen("/tmp/pullrequest.txt", "w");
+		$fp = fopen("/srv/www/pullrequest.txt", "w");
 		if ( $fp ) {
 			fputs($fp, "1");
 			fclose($fp);
