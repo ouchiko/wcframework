@@ -8,6 +8,12 @@
             "wanker": "doWankSystem"
         }
     }, {
+        "uri": "/",
+        "controller": "Homepage",
+        "tasks": {
+            "postcodeapi": "doPostCodePage"
+        }
+    }, {
         "uri": "/pullrequest",
         "controller": "PullController"
     }, {

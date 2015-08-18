@@ -25,8 +25,20 @@ class PullController extends Controller {
      * @return type
      */
     public function init() {
-    	$this->pingPullRequest();
-        $this->view("system/pullrequest.html", array());
+    	//$this->pingPullRequest();
+		 $data = array(
+	        "pagedata" => array(
+	            "stylesheets" => array(
+	                "/css/system/core.css",
+	            )
+	            //"js" => array(
+	             //   "/js/vendor/prism/prism.js"
+	            //)
+	        ) ,
+	        "vars" => $this->variables->getAll()
+	    );
+
+        $this->view("system/pullrequest.html", $data);
     }
 }
 ?>
