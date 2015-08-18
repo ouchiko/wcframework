@@ -28,6 +28,18 @@ class Homepage extends Controller {
         $this->view("system/homepage.html", $data);
     }
 
+    public function doDockerPage() {
+    	//$this->pingPullRequest();
+		 $data = array(
+	        "pagedata" => array(
+	            "scriptsource" => "var stickyhead = false;"
+	        ) ,
+	        "vars" => $this->variables->getAll()
+	    );
+
+        $this->view("system/docker.html", $data);
+    }
+
     public function doPostCodePage() {
     	//$this->pingPullRequest();
 		 $data = array(

@@ -8,12 +8,6 @@
             "wanker": "doWankSystem"
         }
     }, {
-        "uri": "/",
-        "controller": "Homepage",
-        "tasks": {
-            "postcodeapi": "doPostCodePage"
-        }
-    }, {
         "uri": "/pullrequest",
         "controller": "PullController"
     }, {
@@ -34,6 +28,13 @@
         "seperator": "/",
         "naming": "root,page",
         "controller": "PHPFrameDocumentationController"
+    }, {
+        "uri": "/",
+        "controller": "Homepage",
+        "tasks": {
+            "postcodeapi": "doPostCodePage",
+            "dockercontainer": "doDockerPage"
+        }
     }],
     "errors": {
         "base_error": {

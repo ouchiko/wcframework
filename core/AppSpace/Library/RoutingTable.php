@@ -58,9 +58,10 @@ class RoutingTable implements iRoutingTable
         return isset($route->controllerMethod) ? $route->controllerMethod : self::$default_root_method;
     }
 
-    public static function doRouteLogging( $route ){
+    public static function doRouteLogging( $route , $testuri){
         global $logger;
         // You can now use your logger
+        $logger->addInfo(sprintf('Routing Test: %s',$testuri));
         $logger->addInfo(sprintf('Routing controller: %s',$route -> controller));
         $logger->addInfo(sprintf('Routing method: %s',$route -> controllerMethod));
     }
@@ -129,7 +130,7 @@ class RoutingTable implements iRoutingTable
                         $route->controllerMethod = self::lookForTask($urlStack, $route);
                         $route->controllerObjectReference = $route->controller;
                         $route->controllerObject = self::createController($route->controllerObjectReference, $route->urivars, $settings);
-                        self::doRouteLogging( $route );
+                        self::doRouteLogging( $route ,str_replace('/', '\/', $route->uri));
                         return $route;
                     }
                 }
@@ -139,7 +140,7 @@ class RoutingTable implements iRoutingTable
                 $route->controllerMethod = "init";
                 $route->controllerObjectReference = $route->controller;
                 $route->controllerObject = self::createController($route->controllerObjectReference,null, $settings);
-                self::doRouteLogging( $route );
+                self::doRouteLogging( $route, "error" );
                 return $route;
 
             }

@@ -10,7 +10,7 @@
 			<p>A free, fully featured UK postcode API including streets and travel</p>
 		</header>
 
-		<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+		<a href="#" class="image fit"><img src="/images/webcoding/downing.png" alt="Downing Street" /></a>
 		<p>
 			Postcoder uses the awesome <strong>ordnance survey OpenData</strong> products to create a fully featured API. The API accepts
 			a full or partial postcode and responds with the closest matches (up to 20 results).  It also includes the streets most local
@@ -21,35 +21,44 @@
 			Postcoder has had all of the data converted from the UK Grid system to latitude and longitude values making your
 			intergration into other services such as Google Maps easier and more fluid.
 		</p>
-		<p>
+		<div style="text-align:center;margin-bottom:50px;">
+			<a href="/postcoder" class="button">Find out more via the documentation API</a>
+		</div>
+	
+		<div>
 			Postcoder was built with the following services:
-		</p>
-		<p>
-			<div class="icon grey">
-				<img src="/images/webcoding/os-logo-footer.png"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/os-logo-footer.png" title="Ordnance Survey"/>
 			</div>
-			<div class="icon">
-				<img width="157" src="/images/webcoding/docker.jpg"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/docker.jpg" title="Docker"/>
 			</div>
-			<div class="icon">
-				<img height="123" src="/images/webcoding/vagrant.png"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/vagrant.png" title="Vagrant"/>
 			</div>
-			<div class="icon">
-			<img width="157" src="/images/webcoding/twig.jpg"/>
+			<div class="iconlogo">
+				<img  src="/images/webcoding/twig.jpg" title="Twig"/>
 			</div>
-			<div class="icon">
-			<img width="157" src="/images/webcoding/data.png"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/data.png" title"Data.gov.uk"/>
 			</div>
-			<div class="icon">
-			<img width="157" src="php"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/php.png"/>
 			</div>
-			<div class="icon">
-			<img width="157" src="mysql"/>
+			<div class="iconlogo">
+				<img src="/images/webcoding/mysql.png"/>
 			</div>
 			<div class="clear"></div>
-		</p>
+			
+		</div>
 
 	</div>
 </section>
+
+<style>
+.iconlogo img {
+	height: 80px;
+}
+</style>
 
 {% include 'system/templates/foot.html' %}
