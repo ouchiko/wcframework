@@ -27,6 +27,8 @@
 	// You can now use your logger
 	$logger->addInfo('Initialising new request for page');
 
+	$GLOBALS['logger'] = $logger;
+
 	/** Settings for the system **/
 	$settings = ConfigurationLoader::load(__CONFIGURATION__,"settings");
 

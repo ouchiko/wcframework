@@ -1,0 +1,62 @@
+{% if pagedata.exception %}
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Screen Capture</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<style>
+		body {
+			font-family:"Open Sans";
+			padding: 35px;
+			margin:0;
+			font-weight:300;	
+		}
+		body div {
+			margin-bottom: 15px;
+			color:#BCBCBC;
+		}
+		</style>
+	</head>
+	<body>
+		<h2>Screen Capture Error</h2>
+		<div>We couldn't complete your screen shot request.  We found an error when trying to process your input</div>
+		<div>{{ pagedata.exception }}</div>
+		<div>URI: {{ vars.get.uri }}</div>
+		<div>Width: {{ vars.get.width }}</div>
+		<div>Format: {{ vars.get.format }}</div>
+	</body>
+	</html>
+{% endif %}
+
+{% if pagedata.intropage %}
+	{% include 'system/templates/head.html' %}
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="container">
+
+			<header class="major">
+				<h2>screen capture</h2>
+				<p>screen shot generation api</p>
+			</header>
+			<p>
+				capture any website you want in one simple api call to the webcoding screen capture service.  this service
+				has very little requirement for extensive documentation.  call the service with a uri, a width and the return
+				format and the system will send back an image.
+			</p>
+			<blockquote style="font-family:courier;text-decoration:none">
+				<a href="http://{{ vars.server.server_name }}/capture/request/?uri={{ "http://www.bbc.co.uk"|url_encode }}&width=500&format=jpg">http://{{ vars.server.server_name }}/capture/request/?uri={{ "http://www.bbc.co.uk"|url_encode }}&width=500&format=jpg</a>
+			</blockquote>
+			<p>
+				<strong>uri</strong> should be a valid, url encoded URI.  <strong>width</strong> should be the resulting size image you
+				want in pixels.  Use <strong>*</strong> for a full size render.  lastly <strong>format</strong> determines the 
+				response image format and can be either <strong>png</strong> or <strong>jpg</strong>
+			</p>
+			
+			
+
+		</div>
+	</section>
+
+	{% include 'system/templates/foot.html' %}
+{% endif %}

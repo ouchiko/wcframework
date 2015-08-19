@@ -1,0 +1,36 @@
+{% include 'system/templates/head.html' %}
+
+<script src="/js/vendor/webcoding/lib.js"></script>
+<!-- Main -->
+<section id="main" class="wrapper">
+	<div class="container">
+
+		<header class="major">
+			<h2>News over time</h2>
+			<p>for a period of time i captured and stored a vast selection of the BBC news website</p>
+		</header>
+
+		<p>
+			over a number of years and through various iterations of c# application through to <strong><a href="/capture">linux screen
+			capture</a></strong> i managed to capture a significant amount of the bbc's homepages and news sites as part
+			of thier original project bbc backstage. you can see the old calendar site <strong><a href="http://server-2.webcoding.co.uk/BBCArchive/calendar.php?time=1279278105&filter=news">here</a></strong> as an example.  even older, if you fancy a trip down
+			some old pages is the original bbc archive i did <strong><a href="http://server-2.webcoding.co.uk/archive/">here</a></strong>.
+		</p>
+		<p>
+			after collecting the data i collated it into an interesting summary video, in this case it was targeted
+			to show the bbc over a random period and then a seperate video on the london riots back in 2011.
+		</p>
+		<p>
+			<iframe width="49%" height="315" src="https://www.youtube.com/embed/1BfxExdXVmk" frameborder="0" allowfullscreen></iframe>
+			<iframe width="49%" height="315" src="https://www.youtube.com/embed/tyIVDV2BXVo" frameborder="0" allowfullscreen></iframe>
+		</p>
+		<p>
+			the result of this effort was the creation of the screen capture tool found <strong><a href="/capture">here</a></strong> 
+			which has an API where you can request any uri with specified dimensions and it will go away and grab that for you.
+		</p>
+		
+	</div>
+</section>
+
+
+{% include 'system/templates/foot.html' %}

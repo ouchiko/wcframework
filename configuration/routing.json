@@ -1,13 +1,20 @@
 {
     "phpframe": "1.00",
     "routing": [{
-        "uri": "/testthis(.*)",
-        "controller": "MyAppController",
-        "tasks": {
-            "create": "create",
-            "wanker": "doWankSystem"
-        }
-    }, {
+            "uri" : "/capture",
+            "controller": "ScreenCaptureController",
+            "tasks" : {
+                "request" : "requestImage",
+                "apidocs" : "apiDocs"
+            }
+        },{
+        "uri" : "/imagepool/(.*)",
+        "controller": "ImageController",
+        "variables" : true,
+        "seperator" : "/",  
+        "naming":"root,reference"
+        },
+        {
         "uri": "/pullrequest",
         "controller": "PullController"
     }, {
@@ -30,10 +37,12 @@
         "controller": "PHPFrameDocumentationController"
     }, {
         "uri": "/",
-        "controller": "Homepage",
+        "controller": "HomepageController",
         "tasks": {
             "postcodeapi": "doPostCodePage",
-            "dockercontainer": "doDockerPage"
+            "dockercontainer": "doDockerPage",
+            "geomapping" : "doGeoMapPage",
+            "newsovertime" : "doNewsOverTime"
         }
     }],
     "errors": {

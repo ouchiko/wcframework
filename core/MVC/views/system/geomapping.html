@@ -1,0 +1,107 @@
+{% include 'system/templates/head.html' %}
+
+<style>
+.poolimage {
+	float:left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor:pointer;
+}
+.overlay {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: #000;
+	-moz-opacity: 0.80;
+	-khtml-opacity: 0.80;
+	opacity: 0.80;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
+	display:none;
+	z-index: 1;
+}
+
+.imageview {
+	position: fixed;
+	top: 25px;
+	height: 80%;	
+	z-index:2;
+	left: 50%;	
+}
+.imageview img {
+	margin-left:-50%;
+	border: 1px solid #ccc;
+}
+
+
+</style>
+<script src="/js/vendor/webcoding/lib.js"></script>
+<!-- Main -->
+<section id="main" class="wrapper">
+	<div class="container">
+
+		<header class="major">
+			<h2>Geo Mapping</h2>
+			<p>using mapping data to visualise the uk</p>
+		</header>
+
+		<a href="#" class="image fit"><img src="/images/webcoding/entrypage.png" alt="Postcodes visualised" /></a>
+		<p>
+			using data provided by the <strong>data.gov.uk</strong> website such as <strong>naptan</strong> and the ordnance 
+			survey catalogue of postcodes, streets and meridian data we can produce amazing maps of the UK showing the
+			infrastructure and settlement patterns,
+		</p>
+		<p>
+			the postcode data used in these arrangements is the same as the postcoder api service i provide. you can find
+			this data at the <a href="https://github.com/ouchiko/ukord-postcodes">postcode github repo</a>. other data is available
+			at the <strong>data.gov.uk</strong> website.
+		</p>
+		<p>
+			what follows are the current series of images generated using this data.  feel free to contact me regarding these
+			or perhaps the generation of more visualised data sets
+		</p>
+		<p>
+			the meridian data set which powers the more detailed road networks later images is available on request. this has
+			been converted into GML format to make it more suitable for quicker parsing.
+		</p>
+		
+	
+
+		<div class="imagecontainer">
+			<div class="poolimage" data-id="postcode-large.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/postcode-large.png?width=200&height=300"/></div><div>uk postcode map</div>
+			</div>
+			<div class="poolimage" data-id="bus-stops-large.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/bus-stops-large.png?width=200&height=300"/></div><div>uk bus stop map</div>
+			</div>
+			<div class="poolimage" data-id="uk_final_last.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/uk_final_last.png?width=200&height=300"/></div><div>uk road network</div>
+			</div>
+			<div class="poolimage" data-id="uk_rail.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/uk_rail.png?width=200&height=300"/></div><div>uk railway map</div>
+			</div>
+			<div class="poolimage" data-id="uk_rivers_1.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/uk_rivers_1.png?width=200&height=300"/></div><div>uk rivers map</div>
+			</div>
+			<div class="poolimage" data-id="uk_road_large.png" onclick="doImageShow(this)">
+				<div><img src="/imagepool/uk_road_large.png?width=200&height=300"/></div><div>uk road map</div>
+			</div>		
+			<div class="poolimage" data-id="entire_road_network-1000.jpg" onclick="doImageShow(this)">
+				<div><img src="/imagepool/entire_road_network-1000.jpg?width=200&height=300"/></div><div>uk road - meridian</div>
+			</div>
+			<div class="poolimage" data-id="london-road-network.jpg" onclick="doImageShow(this)">
+				<div><img src="/imagepool/london-road-network.jpg?width=200&height=300"/></div><div>london roads - meridian</div>
+			</div>				
+			<div class="clear"></div>
+		</div>
+		
+
+	</div>
+</section>
+
+<div class="overlay"></div>
+<div class="imageview"></div>
+
+
+{% include 'system/templates/foot.html' %}

@@ -7,7 +7,7 @@
 	define("__VENDOR__","../Vendor");
 	define("__ERROR_VISUAL__", true);
 	define("__ROOT__" , $_SERVER['DOCUMENT_ROOT']);
-	define("__LOGS__", "/tmp");
+	define("__LOGS__", $_SERVER['DOCUMENT_ROOT']."/logging");
 
 	if ( __ERROR_VISUAL__ ) 
 	{
@@ -16,4 +16,4 @@
 		ini_set("html_errors","on");
 		ini_set("display_startup_errors", "on");
 	}
-?>	
+?>

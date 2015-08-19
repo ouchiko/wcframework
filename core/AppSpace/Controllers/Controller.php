@@ -53,7 +53,11 @@ class Controller implements iController
 
         try
         {
-            echo $this->template_engine->render($view, $data);
+            if ( isset($view)){
+                echo $this->template_engine->render($view, $data);
+            } else {
+                throw new \Exception("No view proposed");
+            }
         }
         catch ( Exception $e ) {
             echo "There was a problem rendering your page, " . $e -> getMessage();
