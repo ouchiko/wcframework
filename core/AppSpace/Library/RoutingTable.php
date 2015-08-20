@@ -118,6 +118,7 @@ class RoutingTable implements iRoutingTable
                 
                 /** Cycle the routes and examine them for a match **/
                 foreach ($routing_set->routing as $route) {
+                    $GLOBALS['logger'] -> addInfo(sprintf("Examing possible route: %s / %s", $route->uri, $test_scope));
                     /** Remove any variable entries so we can match the URL **/
                     if (preg_match("/" . str_replace('/', '\/', $route->uri) . "/i", $test_scope)) {
                         if ( preg_match("/::/",$route->controller)){

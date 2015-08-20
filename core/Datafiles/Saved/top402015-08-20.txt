@@ -1,0 +1,345 @@
+<html lang="en-gb">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="http://static.bbci.co.uk/radio/835/1.49/style/components/chart_print.css">
+        <link rel="stylesheet" href="http://static.bbci.co.uk/radio/835/1.49/style/components/masthead_logos.css">
+        <title>The Official UK Top 40 Singles Chart - 14th August 2015</title>
+    </head>
+    <body class="service-bbc_radio_one">
+        <div class="masterbrand-logo"></div>
+        <h1>The Official UK Top 40 Singles Chart - 14th August 2015</h1>
+        <table border="1" cellpadding="3" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th>Position</th>
+                    <th>Status</th>
+                    <th>Previous</th>
+                    <th>Weeks</th>
+                    <th>Artist</th>
+                    <th>Title</th>
+                </tr>
+                                    <tr>
+                        <td>1</td>
+                        <td>new</td>
+                        <td>90</td>
+                        <td>1</td>
+                        <td>Charlie Puth</td>
+                        <td>Marvin Gaye (feat. Meghan Trainor)</td>
+                    </tr>
+                                    <tr>
+                        <td>2</td>
+                        <td>non-mover</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>Calvin Harris & Disciples</td>
+                        <td>How Deep Is Your Love</td>
+                    </tr>
+                                    <tr>
+                        <td>3</td>
+                        <td>up 5</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>The Weeknd</td>
+                        <td>Can't Feel My Face</td>
+                    </tr>
+                                    <tr>
+                        <td>4</td>
+                        <td>down 1</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>Little Mix</td>
+                        <td>Black Magic</td>
+                    </tr>
+                                    <tr>
+                        <td>5</td>
+                        <td>down 1</td>
+                        <td>4</td>
+                        <td>16</td>
+                        <td>Lost Frequencies</td>
+                        <td>Are You With Me</td>
+                    </tr>
+                                    <tr>
+                        <td>6</td>
+                        <td>non-mover</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>Sigma</td>
+                        <td>Glitterball (feat. Ella Henderson)</td>
+                    </tr>
+                                    <tr>
+                        <td>7</td>
+                        <td>down 2</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>Years & Years</td>
+                        <td>Shine</td>
+                    </tr>
+                                    <tr>
+                        <td>8</td>
+                        <td>down 1</td>
+                        <td>7</td>
+                        <td>15</td>
+                        <td>Walk the Moon</td>
+                        <td>Shut Up And Dance</td>
+                    </tr>
+                                    <tr>
+                        <td>9</td>
+                        <td>down 8</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>One Direction</td>
+                        <td>Drag Me Down</td>
+                    </tr>
+                                    <tr>
+                        <td>10</td>
+                        <td>down 1</td>
+                        <td>9</td>
+                        <td>34</td>
+                        <td>OMI</td>
+                        <td>Cheerleader (Felix Jaehn Remix)</td>
+                    </tr>
+                                    <tr>
+                        <td>11</td>
+                        <td>non-mover</td>
+                        <td>11</td>
+                        <td>24</td>
+                        <td>Major Lazer x DJ Snake</td>
+                        <td>Lean On (feat. MØ)</td>
+                    </tr>
+                                    <tr>
+                        <td>12</td>
+                        <td>down 2</td>
+                        <td>10</td>
+                        <td>7</td>
+                        <td>Sam Feldt</td>
+                        <td>Show Me Love (feat. Kimberly Anne)</td>
+                    </tr>
+                                    <tr>
+                        <td>13</td>
+                        <td>non-mover</td>
+                        <td>13</td>
+                        <td>3</td>
+                        <td>Disclosure</td>
+                        <td>Omen (feat. Sam Smith)</td>
+                    </tr>
+                                    <tr>
+                        <td>14</td>
+                        <td>non-mover</td>
+                        <td>14</td>
+                        <td>11</td>
+                        <td>Avicii</td>
+                        <td>Waiting For Love</td>
+                    </tr>
+                                    <tr>
+                        <td>15</td>
+                        <td>up 1</td>
+                        <td>16</td>
+                        <td>12</td>
+                        <td>Jason Derulo</td>
+                        <td>Want To Want Me</td>
+                    </tr>
+                                    <tr>
+                        <td>16</td>
+                        <td>down 4</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>David Zowie</td>
+                        <td>House Every Weekend</td>
+                    </tr>
+                                    <tr>
+                        <td>17</td>
+                        <td>down 2</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>Tinie Tempah</td>
+                        <td>Not Letting Go (feat. Jess Glynne)</td>
+                    </tr>
+                                    <tr>
+                        <td>18</td>
+                        <td>non-mover</td>
+                        <td>18</td>
+                        <td>20</td>
+                        <td>Fetty Wap</td>
+                        <td>Trap Queen</td>
+                    </tr>
+                                    <tr>
+                        <td>19</td>
+                        <td>up 1</td>
+                        <td>20</td>
+                        <td>60</td>
+                        <td>Ed Sheeran</td>
+                        <td>Photograph</td>
+                    </tr>
+                                    <tr>
+                        <td>20</td>
+                        <td>down 3</td>
+                        <td>17</td>
+                        <td>3</td>
+                        <td>Joe Stone</td>
+                        <td>The Party (This Is How We Do It) (feat. Montell Jordan)</td>
+                    </tr>
+                                    <tr>
+                        <td>21</td>
+                        <td>down 2</td>
+                        <td>19</td>
+                        <td>6</td>
+                        <td>Silento</td>
+                        <td>Watch Me (Whip / Nae Nae)</td>
+                    </tr>
+                                    <tr>
+                        <td>22</td>
+                        <td>up 3</td>
+                        <td>25</td>
+                        <td>29</td>
+                        <td>James Bay</td>
+                        <td>Let It Go</td>
+                    </tr>
+                                    <tr>
+                        <td>23</td>
+                        <td>new</td>
+                        <td></td>
+                        <td>1</td>
+                        <td>Rita Ora</td>
+                        <td>Body On Me (feat. Chris Brown)</td>
+                    </tr>
+                                    <tr>
+                        <td>24</td>
+                        <td>down 1</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>Jack Ü</td>
+                        <td>Where Are Ü Now (feat. Justin Bieber)</td>
+                    </tr>
+                                    <tr>
+                        <td>25</td>
+                        <td>down 3</td>
+                        <td>22</td>
+                        <td>7</td>
+                        <td>Krept & Konan</td>
+                        <td>Freak Of The Week (feat. Jeremih)</td>
+                    </tr>
+                                    <tr>
+                        <td>26</td>
+                        <td>down 2</td>
+                        <td>24</td>
+                        <td>10</td>
+                        <td>Flo Rida</td>
+                        <td>I Don't Like It, I Love It (feat. Robin Thicke & Verdine White)</td>
+                    </tr>
+                                    <tr>
+                        <td>27</td>
+                        <td>down 6</td>
+                        <td>21</td>
+                        <td>4</td>
+                        <td>John Newman</td>
+                        <td>Come And Get It</td>
+                    </tr>
+                                    <tr>
+                        <td>28</td>
+                        <td>up 1</td>
+                        <td>29</td>
+                        <td>15</td>
+                        <td>Birdy</td>
+                        <td>Wings</td>
+                    </tr>
+                                    <tr>
+                        <td>29</td>
+                        <td>new</td>
+                        <td>46</td>
+                        <td>1</td>
+                        <td>Selena Gomez</td>
+                        <td>Good For You (feat. A$AP Rocky)</td>
+                    </tr>
+                                    <tr>
+                        <td>30</td>
+                        <td>up 1</td>
+                        <td>31</td>
+                        <td>17</td>
+                        <td>Galantis</td>
+                        <td>Runaway (U & I)</td>
+                    </tr>
+                                    <tr>
+                        <td>31</td>
+                        <td>up 4</td>
+                        <td>35</td>
+                        <td>12</td>
+                        <td>The Weeknd</td>
+                        <td>The Hills</td>
+                    </tr>
+                                    <tr>
+                        <td>32</td>
+                        <td>down 2</td>
+                        <td>30</td>
+                        <td>19</td>
+                        <td>Wiz Khalifa</td>
+                        <td>See You Again (feat. Charlie Puth)</td>
+                    </tr>
+                                    <tr>
+                        <td>33</td>
+                        <td>down 7</td>
+                        <td>26</td>
+                        <td>7</td>
+                        <td>Rita Ora</td>
+                        <td>Poison</td>
+                    </tr>
+                                    <tr>
+                        <td>34</td>
+                        <td>down 7</td>
+                        <td>27</td>
+                        <td>8</td>
+                        <td>Fifth Harmony</td>
+                        <td>Worth It (feat. Kid Ink)</td>
+                    </tr>
+                                    <tr>
+                        <td>35</td>
+                        <td>down 3</td>
+                        <td>32</td>
+                        <td>36</td>
+                        <td>Mark Ronson</td>
+                        <td>Uptown Funk (feat. Bruno Mars)</td>
+                    </tr>
+                                    <tr>
+                        <td>36</td>
+                        <td>down 3</td>
+                        <td>33</td>
+                        <td>21</td>
+                        <td>Kygo</td>
+                        <td>Stole The Show (feat. Parson James)</td>
+                    </tr>
+                                    <tr>
+                        <td>37</td>
+                        <td>down 3</td>
+                        <td>34</td>
+                        <td>20</td>
+                        <td>Deorro X Chris Brown</td>
+                        <td>Five More Hours</td>
+                    </tr>
+                                    <tr>
+                        <td>38</td>
+                        <td>down 2</td>
+                        <td>36</td>
+                        <td>6</td>
+                        <td>Shaggy</td>
+                        <td>I Need Your Love (feat. Mohombi, Faydee and Costi)</td>
+                    </tr>
+                                    <tr>
+                        <td>39</td>
+                        <td>new</td>
+                        <td></td>
+                        <td>1</td>
+                        <td>Tough Love</td>
+                        <td>Pony (Jump On It) (feat. Ginuwine)</td>
+                    </tr>
+                                    <tr>
+                        <td>40</td>
+                        <td>down 3</td>
+                        <td>37</td>
+                        <td>24</td>
+                        <td>Years & Years</td>
+                        <td>King</td>
+                    </tr>
+                            </tbody>
+        </table>
+    </body>
+</html> 

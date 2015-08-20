@@ -11,6 +11,10 @@ use MVC\models\ScreenCaptureModel;
 
 class ScreenCaptureController extends Controller {
     
+    /**
+     * Runs the API documentation for the stuff
+     * @return type
+     */
 	public function apiDocs(){
 		$data = array(
             "pagedata" => array(
@@ -40,7 +44,7 @@ class ScreenCaptureController extends Controller {
         try {            
             /* Model Execution */
             $screen_capture_model = new ScreenCaptureModel();
-            $screen_capture_model->loadStyleSheet(__ROOT__ . "/core/Datafiles/raster.js");
+            $screen_capture_model->loadStyleSheet(__ROOT__ . "/core/Datafiles/PhantomJS/raster.js");
             $screen_capture_model->processVariables($this->variables);
             $image_output = $screen_capture_model->doScreenShot($screen_capture_model->getNode());
             /* Image output */

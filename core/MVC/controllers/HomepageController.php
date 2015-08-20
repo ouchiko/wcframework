@@ -28,6 +28,10 @@ class HomepageController extends Controller {
         $this->view("system/" . $view, $data);
     }
     
+    public function doWCFramework(){
+        $this -> basePage("wcframework.html");
+    }
+
     /**
      * Controller initialiser
      * @return type

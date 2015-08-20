@@ -1,0 +1,44 @@
+{% include 'system/templates/head.html' %}
+
+<script src="/js/vendor/webcoding/lib.js"></script>
+<!-- Main -->
+<section id="main" class="wrapper">
+	<div class="container">
+
+		<header class="major">
+			<h2>the top 40 charts</h2>
+			<p>providing the top 40 UK chart data in <strong>json</strong>, <strong>xml</strong> and <strong>serialized</strong></p>
+		</header>
+
+		<p>
+			i've been providing the top 40 charts in various formats for a long time now. it began as a <strong>bbc backstage</strong>
+			project but i've carried it on over the years.  feel free to use this as you wish.  the chart data is obtained via the
+			bbc's site and transformed into various machine readble formats.
+		</p>
+		<p>
+			In JSON format:
+			<blockquote>
+			<a href="http://{{ vars.server.server_name }}/top40.json">http://{{ vars.server.server_name }}/top40.json</a>
+			</blockquote>
+
+			In XML format:
+			<blockquote>
+			<a href="http://{{ vars.server.server_name }}/top40.xml">http://{{ vars.server.server_name }}/top40.xml</a>
+			</blockquote>
+
+			In serialized form:
+			<blockquote>
+			<a href="http://{{ vars.server.server_name }}/top40.ser">http://{{ vars.server.server_name }}/top40.ser</a>
+			</blockquote>
+		</p>
+		
+		<p>
+			let me know if you need any more or want something else done. as usual all this stuff is available at source
+			from my framework- @ouchy
+		</p>
+		
+	</div>
+</section>
+
+
+{% include 'system/templates/foot.html' %}

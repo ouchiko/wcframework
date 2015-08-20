@@ -1,20 +1,31 @@
 {
     "phpframe": "1.00",
     "routing": [{
-            "uri" : "/capture",
-            "controller": "ScreenCaptureController",
-            "tasks" : {
-                "request" : "requestImage",
-                "apidocs" : "apiDocs"
-            }
-        },{
-        "uri" : "/imagepool/(.*)",
+        "uri": "/capture",
+        "controller": "ScreenCaptureController",
+        "tasks": {
+            "request": "requestImage",
+            "apidocs": "apiDocs"
+        }
+    }, {
+        "uri":"/top40\\.(.*)",
+        "controller":"TopFortyController",
+        "seperator":".",
+        "variables":"true",
+        "naming":"root,extension"
+    },
+    {
+        "uri": "/top40",
+        "controller" : "TopFortyController::docs"
+    }
+    ,
+    {
+        "uri": "/imagepool/(.*)",
         "controller": "ImageController",
-        "variables" : true,
-        "seperator" : "/",  
-        "naming":"root,reference"
-        },
-        {
+        "variables": true,
+        "seperator": "/",
+        "naming": "root,reference"
+    }, {
         "uri": "/pullrequest",
         "controller": "PullController"
     }, {
@@ -41,8 +52,9 @@
         "tasks": {
             "postcodeapi": "doPostCodePage",
             "dockercontainer": "doDockerPage",
-            "geomapping" : "doGeoMapPage",
-            "newsovertime" : "doNewsOverTime"
+            "geomapping": "doGeoMapPage",
+            "newsovertime": "doNewsOverTime",
+            "wcframework":"doWCFramework"
         }
     }],
     "errors": {
