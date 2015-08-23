@@ -18,6 +18,7 @@ use AppSpace\Data\Mysql;
 class HomepageController extends Controller {
     
     private function basePage($view) {
+
         $data = array(
             "pagedata" => array(
                 "scriptsource" => "var stickyhead = false;"
@@ -25,6 +26,30 @@ class HomepageController extends Controller {
             "vars" => $this->variables->getAll()
         );
         
+
+        switch ( $view ) {
+            case "newsovertime.html" : 
+                $data['pagedata']['title'] = "BBC News over time";
+                $data['pagedata']['description'] = "Using screen capture and video to present news over time";
+                $data['pagedata']['keywords'] = "news,scree,capture,webcoding,bbc,over,time";
+            break;
+             case "docker.html" : 
+                $data['pagedata']['title'] = "Docker containers";
+                $data['pagedata']['description'] = "Understanding and playing with Docker containers";
+                $data['pagedata']['keywords'] = "docker,containers,managing,learning,deployment";
+            break;
+             case "postcoder.html" : 
+                $data['pagedata']['title'] = "Postcode API";
+                $data['pagedata']['description'] = "Bringing together open data to produce a free postcode API";
+                $data['pagedata']['keywords'] = "postcode,api,free,uk,json,serialise,xml";
+            break;
+            case "geomapping.html" : 
+                $data['pagedata']['title'] = "Geomapping Visualisations";
+                $data['pagedata']['description'] = "Visualisations of the UK through various geo mapping techniques";
+                $data['pagedata']['keywords'] = "ukgrid,postcode,visual,uk,naptan";
+            break;
+        }
+
         $this->view("system/" . $view, $data);
     }
     
@@ -41,7 +66,10 @@ class HomepageController extends Controller {
         //$this->pingPullRequest();
         $data = array(
             "pagedata" => array(
-                "scriptsource" => "var stickyhead = true;"
+                "scriptsource" => "var stickyhead = true;",
+                "title" => "Developing stuff for 15 years",
+                "description" => "Web development for @ouchy",
+                "keywords" => "web,development,vagrant,docker,php,lamp,css"
             ) ,
             "vars" => $this->variables->getAll()
         );
