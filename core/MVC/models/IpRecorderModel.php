@@ -1,0 +1,22 @@
+<?php
+namespace MVC\Models;
+
+class IpRecorderModel
+{
+    
+    private $source = null;
+
+    public function __construct() { 
+    	$this -> source = "/tmp/ip.txt";
+    }
+    
+    public function pushIpAddress($ip_address) {
+        $fp = @fopen($this->source, "w");
+        @fputs($fp, $ip_address);
+        @fclose($fp);
+    }
+    
+    public function getIpAddress() {
+        return file_get_contents($this->source);
+    }
+}

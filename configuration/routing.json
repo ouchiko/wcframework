@@ -1,6 +1,16 @@
 {
     "phpframe": "1.00",
-    "routing": [{
+    "routing": [
+    {
+        "uri" : "/homework",
+        "controller" : "IpRecorderController",
+        "tasks" : {
+            "push" : "push",
+            "get" : "get"
+        }
+
+    },
+    {
         "uri": "/capture",
         "controller": "ScreenCaptureController",
         "tasks": {
