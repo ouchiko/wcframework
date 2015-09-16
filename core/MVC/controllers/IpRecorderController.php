@@ -14,6 +14,7 @@
 
 		public function push(){
 			$model = new IpRecorderModel();
+			print_r($_SERVER);
 			$model -> pushIpAddress($_SERVER['REMOTE_ADDR']);
 		}
 
