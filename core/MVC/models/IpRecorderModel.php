@@ -7,7 +7,7 @@ class IpRecorderModel
     private $source = null;
 
     public function __construct() { 
-    	$this -> source = "/tmp/ip.txt";
+    	$this -> source = $_SERVER['DOCUMENT_ROOT']."logging/ip.txt";
     }
     
     public function pushIpAddress($ip_address) {
