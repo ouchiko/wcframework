@@ -13,5 +13,14 @@
                 "port": "3304"
             }
         }
+    },
+    "rabbitmq" : {
+        "primary" : {
+            "host": "127.0.0.1",
+            "user": "guest",
+            "pass": "guest",
+            "port": "5672"
+        }
     }
+
 }

@@ -12,7 +12,9 @@ use MVC\models\Top40Model;
 
 class TopFortyController extends Controller {
     
-
+	/**
+	 * Process the documents
+	 */
 	public function docs(){
 
 		$data = array(

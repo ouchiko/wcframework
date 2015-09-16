@@ -9,11 +9,13 @@
 	include_once "Setup/definitions.php";
 	include_once "Setup/twig_setup.php";
 	include_once "Setup/autoload.php";
+	include_once "Vendor/autoload.php";
 	
 	/** USAGE **/
 	use AppSpace\Controllers\Controller;
 	use AppSpace\Library\ConfigurationLoader;
 	use AppSpace\Library\RoutingTable;
+	use AppSpace\Logging\MQLogging;
 	use Monolog\Logger;
 	use Monolog\Handler\StreamHandler;
 	use Monolog\Handler\FirePHPHandler;
@@ -31,6 +33,9 @@
 
 	/** Settings for the system **/
 	$settings = ConfigurationLoader::load(__CONFIGURATION__,"settings");
+
+	$visitorLogging = new MQLogging($settings->rabbitmq->primary);
+	$visitorLogging -> makeRequest(array("timing" => time(), "details" => $_SERVER, "get" => $_GET, "post" => $_POST, "cookie" => $_COOKIE));
 
 	/** PREPARE THE ROUTE IN **/
 	$route = RoutingTable::parse( 

@@ -4,6 +4,7 @@
     },
 
     "require": {
-        "monolog/monolog": "^1.16"
+        "monolog/monolog": "^1.16",
+	"videlalvaro/php-amqplib": "2.5.*"
     }
 }
